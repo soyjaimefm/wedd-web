@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroSection from "../components/HeroSection.astro";
+import HeroSection from "../components/HeroSection/HeroSection.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Countdown from "../components/Countdown.astro";
+import ConfirmationForm from "../components/ConfirmationForm.astro";
 ---
 
 <Layout title="Manu y Cris">
@@ -14,207 +15,45 @@ import Countdown from "../components/Countdown.astro";
     <!-- Sección 1 -->
     <section id="donde-y-cuando" class="container mx-auto py-12 px-4">
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-20">
-        <div>
-          <SectionTitle>Donde y cuando</SectionTitle>
+        <div class="space-y-12">
+          <SectionTitle>Dónde y cuándo</SectionTitle>
+          <a href="https://maps.app.goo.gl/Ss3ru119fK68RGmh7" target="_blank">
+            <div class="flex flex-col gap-6 items-center my-6">
+              <img class="w-40" src="/donde.png" alt="">
+              <span class="text-3xl">Bodega Finca Los Aljibes</span>
+            </div>
+          </a>
+          <div class="flex flex-col gap-6 items-center my-6">
+            <img class="w-40" src="/cuando.png" alt="">
+            <span class="text-3xl">19-10-2024 a las 12:00</span>
+          </div>
           <p class="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            dicta nemo saepe laborum, esse recusandae quasi tempore fuga
-            consequatur consectetur enim ratione consequuntur ipsam sunt a? A
-            hic aliquam odio! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Laboriosam dicta nemo saepe laborum, esse recusandae quasi
-            tempore fuga consequatur consectetur enim ratione consequuntur ipsam
-            sunt a? A hic aliquam odio!Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laboriosam dicta nemo saepe laborum, esse
-            recusandae quasi tempore fuga consequatur consectetur enim ratione
-            consequuntur ipsam sunt a? A hic aliquam odio!
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta
-            nemo saepe laborum, esse recusandae quasi tempore fuga consequatur consectetur
-            enim ratione consequuntur ipsam sunt a? A hic aliquam odio!Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Laboriosam dicta nemo saepe
-            laborum, esse recusandae quasi tempore fuga consequatur consectetur enim
-            ratione consequuntur ipsam sunt a? A hic aliquam odio!
+            Pondremos buses para que podáis desplazaros desde Albacete y Hellín. También podéis venir con coche propio, en la finca habrá aparcamiento disponible.
           </p>
         </div>
         <div>
-          <img alt="" src="/section1.png" class="object-cover aspect-[9/16]" />
+          <img alt="Manu y Cris en la playa" src="/section1.png" class="rounded-xl object-cover aspect-[9/16]" />
         </div>
       </div>
     </section>
 
     <!-- Sección 2 -->
-    <section id="alojamientos" class="container mx-auto py-12 px-4">
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-20">
+    <section id="alojamientos" class="bg-softGreen">
+      <div class="container mx-auto py-12 px-4 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-20">
         <div class="order-2 md:order-first">
-          <img alt="" src="/mountain.png" class="object-cover aspect-auto" />
+          <img alt="" src="/mountain.png" class="rounded-xl object-cover aspect-auto" />
         </div>
         <div>
           <SectionTitle>Alojamientos</SectionTitle>
           <p class="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            dicta nemo saepe laborum, esse recusandae quasi tempore fuga
-            consequatur consectetur enim ratione consequuntur ipsam sunt a? A
-            hic aliquam odio! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Laboriosam dicta nemo saepe laborum, esse recusandae quasi
-            tempore fuga consequatur consectetur enim ratione consequuntur ipsam
-            sunt a? A hic aliquam odio!Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laboriosam dicta nemo saepe laborum, esse
-            recusandae quasi tempore fuga consequatur consectetur enim ratione
-            consequuntur ipsam sunt a? A hic aliquam odio!
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta
-            nemo saepe laborum, esse recusandae quasi tempore fuga consequatur consectetur
-            enim ratione consequuntur ipsam sunt a? A hic aliquam odio!Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Laboriosam dicta nemo saepe
-            laborum, esse recusandae quasi tempore fuga consequatur consectetur enim
-            ratione consequuntur ipsam sunt a? A hic aliquam odio!
+            Si venís desde lejos y necesitáis hacer noche en algún hotel estos son los que os recomendamos:
           </p>
         </div>
       </div>
     </section>
-
     <section id="confirmacion" class="container mx-auto py-12 px-4">
       <SectionTitle>Confirmación</SectionTitle>
-
-      <!-- <form method="POST" action="https://script.google.com/macros/s/AKfycbzBXIEpQQp0u8hYxeDK9QyYzfiGU966Q5scAosJL6kIjZymxLXcFbJyMv3cuuxtokz45Q/exec">
-        <input name="Email" type="email" placeholder="Email" required />
-        <input name="Name" type="text" placeholder="Name" required />
-        <button type="submit">Send</button>
-      </form> -->
-
-
-
-
-      
-
-
-      <form class="space-y-4">
-        <div>
-          <label class="sr-only" for="name">Nombre</label>
-          <input
-            class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
-            placeholder="Nombre"
-            type="text"
-            name="Name"
-            id="name"
-          />
-        </div>
-
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div>
-            <label class="sr-only" for="email">Email</label>
-            <input
-              class="w-full rounded-lg border-gray-200 p-3"
-              placeholder="Email"
-              type="email"
-              name="Email"
-              id="email"
-            />
-          </div>
-
-          <div>
-            <label class="sr-only" for="phone">Teléfono</label>
-            <input
-              class="w-full rounded-lg border-gray-200 p-3 text-sm"
-              placeholder="Teléfono"
-              type="tel"
-              id="phone"
-            />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-          <div>
-            <label
-              for="Option1"
-              class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-              tabindex="0"
-            >
-              <input class="sr-only" id="Option1" type="radio" tabindex="-1" name="option" />
-
-              <span class="text-sm"> Option 1 </span>
-            </label>
-          </div>
-
-          <div>
-            <label
-              for="Option2"
-              class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-              tabindex="0"
-            >
-              <input class="sr-only" id="Option2" type="radio" tabindex="-1" name="option" />
-
-              <span class="text-sm"> Option 2 </span>
-            </label>
-          </div>
-
-          <div>
-            <label
-              for="Option3"
-              class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-              tabindex="0"
-            >
-              <input class="sr-only" id="Option3" type="radio" tabindex="-1" name="option" />
-
-              <span class="text-sm"> Option 3 </span>
-            </label>
-          </div>
-        </div>
-
-        <div>
-          <label class="sr-only" for="message">Message</label>
-
-          <textarea
-            class="w-full rounded-lg border-gray-200 p-3 text-sm"
-            placeholder="Message"
-            rows="8"
-            id="message"
-          ></textarea>
-        </div>
-
-        <div class="mt-4">
-          <button
-            type="submit"
-            class="inline-block w-full rounded-lg bg-primaryGreen px-5 py-3 text-white sm:w-auto"
-          >
-            Enviar confirmación
-          </button>
-        </div>
-      </form>
+      <ConfirmationForm />
     </section>
   </main>
 </Layout>
-
-
-<script>
-  const form = document.querySelector('form');
-
-
-  form?.addEventListener('submit',async (e) => {
-    e.preventDefault();
-    console.log(form);
-
-    const formdata = new FormData(form);
-    console.log(formdata);
-
-    const objeto = Object.fromEntries(formdata.entries());
-    console.log(objeto)
-
-
-
-
-
-    fetch('https://script.google.com/macros/s/AKfycbzBXIEpQQp0u8hYxeDK9QyYzfiGU966Q5scAosJL6kIjZymxLXcFbJyMv3cuuxtokz45Q/exec', { method: 'POST', body: formdata}).then(response => {
-      alert('Success!');
-      console.log(response);
-    }).catch(error => {
-      alert('Error');
-      console.log(error);
-    })
-
-
-    
-  })
-</script>

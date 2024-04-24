@@ -51,37 +51,37 @@ const { title } = Astro.props;
   let counter = 0;
 
 
-  secondsElement?.addEventListener('click', () => {
+  // secondsElement?.addEventListener('click', () => {
 
-    console.log(daysElement?.innerHTML);
-    let number = Number(daysElement?.innerHTML) - 1;
-    daysElement.innerHTML = number.toString();
-    counter ++;
-    console.log(counter);
+  //   console.log(daysElement?.innerHTML);
+  //   let number = Number(daysElement?.innerHTML) - 1;
+  //   daysElement.innerHTML = number.toString();
+  //   counter ++;
+  //   console.log(counter);
 
-  });
+  // });
 
 
 
-  // setInterval(() => {
-  //   let timeNow = new Date();
-  //   let t = (wedDate.getTime() - timeNow.getTime()) / 1000;
-  //   let seconds = Math.floor(t % 60);
-  //   let minutes = Math.floor(t / 60) % 60;
-  //   let hours = Math.floor(t / (60 * 60)) % 24;
-  //   let days = Math.floor(t / (60 * 60 * 24));
+  setInterval(() => {
+    let timeNow = new Date();
+    let t = (wedDate.getTime() - timeNow.getTime()) / 1000;
+    let seconds = Math.floor(t % 60);
+    let minutes = Math.floor(t / 60) % 60;
+    let hours = Math.floor(t / (60 * 60)) % 24;
+    let days = Math.floor(t / (60 * 60 * 24));
     
 
-  //   if (
-  //     daysElement != null &&
-  //     hoursElement != null &&
-  //     minutesElement != null &&
-  //     secondsElement != null
-  //   ) {
-  //     // daysElement.innerHTML = days.toString();
-  //     // hoursElement.innerHTML = hours.toString();
-  //     // minutesElement.innerHTML = minutes.toString();
-  //     secondsElement.innerHTML = seconds.toString();
-  //   }
-  // }, 1000);
+    if (
+      daysElement != null &&
+      hoursElement != null &&
+      minutesElement != null &&
+      secondsElement != null
+    ) {
+      daysElement.innerHTML = days.toString();
+      hoursElement.innerHTML = hours.toString();
+      minutesElement.innerHTML = minutes.toString();
+      secondsElement.innerHTML = seconds.toString();
+    }
+  }, 1000);
 </script>

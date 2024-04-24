@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header
+  class="z-20 flex justify-center items-center w-full bg-softGreen text-primaryGreen font-theSeasons"
+>
+  <nav class="w-full">
+    <div class="container mx-auto flex items-center justify-center gap-40">
+      <ul class="w-32 flex flex-col items-start">
+        <li>
+          <a href="#cuenta-atras"> Cuenta atrás </a>
+        </li>
+        <li>
+          <a href="#donde-y-cuando"> Dónde y cuándo </a>
+        </li>
+      </ul>
+      <a class="w-28" href="/">
+        <Image src="/logo-myc.png" alt="logo-home" width={110} height={110} />
+      </a>
+
+      <ul class="w-32 flex flex-col items-end">
+        <li>
+          <a href="#alojamientos"> Alojamientos </a>
+        </li>
+        <li>
+          <a href="#confirmacion"> Confirmación </a>
+        </li>
+      </ul>
+      <!-- <div class="flex items-center md:order-2 space-x-3 md:space-x-0">
+        <button
+          type="button"
+          class="flex items-center p-2 w-10 h-10 justify-center rounded-lg md:hidden"
+        >
+          <span class="sr-only">Abrir menú</span>
+          <RocketLaunch />
+        </button>
+      </div> -->
+      <!-- <div
+        class={`items-center justify-between w-full md:flex md:w-auto md:order-1 `}
+      >
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-5 md:space-x-8 md:flex-row md:mt-0 md:border-0 bg-blue-bayoux-500 rounded-lg"
+        >
+          <li>
+            <a class={`py-2 px-3 text-xl hover:opacity-70 block`} href="/">
+              Home
+            </a>
+          </li>
+        </ul>
+      </div> -->
+    </div>
+  </nav>
+</header>

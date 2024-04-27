@@ -33,8 +33,8 @@
       </div>
     </div>
     <div>
-      <p class="my-2">¿Vas a necesitar un bus para llegar a la finca?</p>
-      <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
+      <label class="my-2">¿Vas a necesitar un bus para llegar a la finca?</label>
+      <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
         <div>
           <label
             for="Option1"
@@ -47,14 +47,14 @@
               type="radio"
               tabindex="-1"
               name="Transporte"
-              value="Hellín"
+              value="Sí"
               required
             />
-            <span>Sí, desde Hellín</span>
+            <span>Sí, lo necesitaré.</span>
           </label>
         </div>
 
-        <div>
+        <!-- <div>
           <label
             for="Option2"
             class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 hover:border-primaryGreen has-[:checked]:border-primaryGreen has-[:checked]:bg-primaryGreen has-[:checked]:text-white"
@@ -71,7 +71,7 @@
             />
             <span>Sí, desde Albacete</span>
           </label>
-        </div>
+        </div> -->
 
         <div>
           <label
@@ -95,13 +95,35 @@
     </div>
 
     <div>
+      <label for="alergy">¿Tienes alguna alergia o intolerancia?</label>
+      <input
+        class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+        placeholder="alergia/intolerancia"
+        type="text"
+        name="Alergias"
+        id="alergy"
+      />
+    </div>
+
+    <div>
+      <label for="song">Dinos que canción o canciones te gustaría escuchar este día:</label>
+      <input
+        class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+        placeholder="Artista y canción"
+        type="text"
+        name="Música"
+        id="song"
+      />
+    </div>
+
+    <div>
       <label class="sr-only" for="message"
         >Si tienes algo más que añadir puedes ponerlo por aquí</label
       >
       <textarea
         class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
-        placeholder="Si tienes algo más que añadir puedes ponerlo por aquí"
-        rows="8"
+        placeholder="Si tienes algo más que añadir puedes ponerlo por aquí..."
+        rows="4"
         name="Mensaje"
         id="message"></textarea>
     </div>

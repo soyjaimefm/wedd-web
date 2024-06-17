@@ -26,7 +26,7 @@ import CopyIcon from "./Icons/CopyIcon.astro";
 
 <script>
   let accountButton = document.querySelector('#ACCOUNT_BUTTON');
-  let accountNumber = document.querySelector('#ACCOUNT').innerText;
+  let accountNumber = (document.querySelector('#ACCOUNT') as HTMLElement).innerText;
   accountButton?.addEventListener('click', async (e) => {
     await navigator.clipboard.writeText(accountNumber);
     alert('Número de cuenta copiado al portapapeles');

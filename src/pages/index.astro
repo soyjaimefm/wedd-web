@@ -33,8 +33,8 @@ import Contact from "../components/Contact.astro";
             podéis venir con coche propio, en la finca habrá aparcamiento
             disponible.
           </p>
-          <p class="text-center text-sm">
-            *Los horarios de los buses estarán disponibles más adelante.
+          <p class="text-center">
+            El bus saldrá desde Hellín a las 12:00.
           </p>
         </div>
         <div>
@@ -87,11 +87,15 @@ import Contact from "../components/Contact.astro";
       <SectionTitle>Confirmación</SectionTitle>
       <ConfirmationForm />
     </section>
-
     <section id="contacto" class="bg-softGreen">
       <div class="container mx-auto py-12 px-4">
         <Contact />
       </div>
+    </section>
+    <section class="bg-primaryGreen flex justify-center">
+      <a href="https://www.loveactually.es/">
+        <span class="text-beige">Made with <span class="underline text-beige">Love Actually</span> 🤍</span>
+      </a>
     </section>
   </main>
 </Layout>

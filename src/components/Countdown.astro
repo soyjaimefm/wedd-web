@@ -5,7 +5,9 @@ import SectionTitle from "./SectionTitle.astro";
 <astro-countdown>
   <SectionTitle>Cuenta atrás</SectionTitle>
   <p class="text-center mb-10">
-    Estamos deseando disfrutar de este día <span class="whitespace-nowrap">con todos vosotros</span>
+    Estamos deseando disfrutar de este día <span class="whitespace-nowrap"
+      >con todos vosotros</span
+    >
   </p>
   <div class="flex gap-6 sm:gap-12 justify-center font-theSeasons">
     <div class="flex flex-col gap-2">
@@ -39,6 +41,32 @@ import SectionTitle from "./SectionTitle.astro";
       const minutesElement = this.querySelector("#minutes");
       const secondsElement = this.querySelector("#seconds");
 
+      let timeNow = new Date();
+      let t = (wedDate.getTime() - timeNow.getTime()) / 1000;
+      let seconds = Math.floor(t % 60);
+      let minutes = Math.floor(t / 60) % 60;
+      let hours = Math.floor(t / (60 * 60)) % 24;
+      let days = Math.floor(t / (60 * 60 * 24));
+
+      if (
+        daysElement != null &&
+        hoursElement != null &&
+        minutesElement != null &&
+        secondsElement != null
+      ) {
+        if (t > 0) {
+          daysElement.innerHTML = days.toString();
+          hoursElement.innerHTML = hours.toString();
+          minutesElement.innerHTML = minutes.toString();
+          secondsElement.innerHTML = seconds.toString();
+        } else {
+          daysElement.innerHTML = "0";
+          hoursElement.innerHTML = "0";
+          minutesElement.innerHTML = "0";
+          secondsElement.innerHTML = "0";
+        }
+      }
+
       setInterval(() => {
         let timeNow = new Date();
         let t = (wedDate.getTime() - timeNow.getTime()) / 1000;
@@ -47,15 +75,27 @@ import SectionTitle from "./SectionTitle.astro";
         let hours = Math.floor(t / (60 * 60)) % 24;
         let days = Math.floor(t / (60 * 60 * 24));
 
-        if (daysElement != null && hoursElement != null && minutesElement != null && secondsElement != null) {
-          daysElement.innerHTML = days.toString();
-          hoursElement.innerHTML = hours.toString();
-          minutesElement.innerHTML = minutes.toString();
-          secondsElement.innerHTML = seconds.toString(); 
+        if (
+          daysElement != null &&
+          hoursElement != null &&
+          minutesElement != null &&
+          secondsElement != null
+        ) {
+          if (t > 0) {
+            daysElement.innerHTML = days.toString();
+            hoursElement.innerHTML = hours.toString();
+            minutesElement.innerHTML = minutes.toString();
+            secondsElement.innerHTML = seconds.toString();
+          } else {
+            daysElement.innerHTML = "0";
+            hoursElement.innerHTML = "0";
+            minutesElement.innerHTML = "0";
+            secondsElement.innerHTML = "0";
+          }
         }
       }, 1000);
     }
   }
 
-  customElements.define('astro-countdown', AstroCountdown);
+  customElements.define("astro-countdown", AstroCountdown);
 </script>
